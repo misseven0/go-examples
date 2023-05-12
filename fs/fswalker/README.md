@@ -22,9 +22,11 @@ Trojan:Win64/Wingo.psyA!MTB
 
 # 示例编译Size(无任何优化参数)
 不同功能,不同逻辑,不同代码.这样比较其实没有意义,只是作为一个参考
-walker       2160k
-godirwalk    2171k
-skywalker    2444k
+fastwalk-golang             2147k
+walker                      2160k
+godirwalk                   2171k
+fastwalk-charlievieth       2300k
+skywalker                   2444k
 
 ## skywalker提供了更多的功能:
 1.设置"工作协程"数量,
@@ -59,6 +61,16 @@ type Worker interface {
 包含该包的软件会被win安全中心误报为木马程序
 Windows Defender
 Trojan:Win64/Wingo.psyA!MTB
+
+
+## charlievieth/fastwalk
+这个pkg的核心代码来自golang.org/x/tools/internal/fastwalk.
+(Inspired by and based off of golang.org/x/tools/internal/fastwalk.)
+这里有一段注释:来自fastwalk.go
+ * This code borrows heavily from golang.org/x/tools/internal/fastwalk
+ * and as such the Go license can be found in the go.LICENSE file and
+ * is reproduced below:.....
+可以看到这个pkg是基于golang.org/x/tools的
 
 ### 
 
