@@ -9,7 +9,6 @@ import (
 
 func main() {
 	dirname := "some/directory/root"
-	dirname = `D:\Elva\goProjects\go-examples`
 	err := godirwalk.Walk(dirname, &godirwalk.Options{
 		Callback: func(osPathname string, de *godirwalk.Dirent) error {
 			// Following string operation is not most performant way
