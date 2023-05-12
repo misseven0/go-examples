@@ -4,4 +4,4 @@
 Windows Defender
 Trojan:Win64/Wingo.psyA!MTB
 
-###建议使用其他pkg代替,或者fork一份代码 尝试修改混淆一下代码逻辑
+###建议使用其他pkg代替,或者fork一份代码 尝试修改混淆一下代码
