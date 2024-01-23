@@ -2,9 +2,9 @@ package main
 
 import (
 	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
+
 
 func main() {
 	router := gin.Default()
@@ -12,7 +12,7 @@ func main() {
 	router.StaticFS("/public", http.Dir("./web/"))
 	//router.StaticFile("/favicon.ico", "./resources/favicon.ico")
 	router.GET("/test/Ping", Ping)
-	router.GET("/movies/get", GetMovie)
+	router.GET("/m/get", GetMovie)
 	router.Run(":8888")
 }
 
@@ -22,10 +22,10 @@ func Ping(c *gin.Context) {
 	})
 }
 
-func GetMovie(c *gin.Context) {
+func GetM(c *gin.Context) {
 	id := c.Query("id")
 	c.JSON(200, gin.H{
-		"message": "GetMovie",
+		"message": "GetM",
 		"id":      id,
 	})
 }
